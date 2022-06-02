@@ -6,8 +6,9 @@ var pagar = 0;
 function calcular() {
     total = 0;
     pagar = 0;
-    for (const monto of montos) {
-        total += parseFloat(monto);
+    
+    for (let monto of montos) {
+        total = total + parseFloat(monto);
     }
     pagar = parseFloat(total / montos.length);
 
@@ -15,15 +16,13 @@ function calcular() {
     document.getElementById("pagar").innerHTML = ""
 
     pagarid.innerHTML += `
-    <div id="">
     <p>El total gastado fue: $${total}</p>
     <p>Cada uno debe pagar: $${pagar}</p>
-    </div>
     `
 }
 
 function agregar(nombre, monto){
-    nombre.push(nombre);
+    nombres.push(nombre);
     montos.push(monto);
     imprimir();
     calcular();
@@ -39,7 +38,7 @@ function borrar() {
 
 function imprimir() {
     let nuevo = document.getElementById("datos");
-    document.getElementById("datos ").innerHTML = ""
+    document.getElementById("datos").innerHTML = ""
     for (let i = 0; i < montos.length; i++) {
         nuevo.innerHTML += `
         <div class="">
