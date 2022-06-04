@@ -1,39 +1,43 @@
 var nombres = [];
 var montos = [];
 var total = 0;
-var pagar = 0;
+var pagarcu = 0;
 
 function calcular() {
     total = 0;
-    pagar = 0;
+    pagarcu = 0;
     
     for (let monto of montos) {
-        total = total + parseFloat(monto);
+        total += parseFloat(monto);
     }
-    pagar = parseFloat(total / montos.length);
+    pagarcu = parseFloat(total / parseInt(montos.length)).toFixed(2);
 
     let pagarid = document.getElementById("pagar");
     document.getElementById("pagar").innerHTML = ""
 
     pagarid.innerHTML += `
     <p>El total gastado fue: $${total}</p>
-    <p>Cada uno debe pagar: $${pagar}</p>
+    <p>Cada uno debe pagar: $${pagarcu}</p>
     `
 }
 
 function agregar(nombre, monto){
+
+    if(monto === undefined || monto === NaN || monto == "")
+        monto = parseInt(0);
+
     nombres.push(nombre);
     montos.push(monto);
     imprimir();
     calcular();
 }
 
-function borrar() {
-    let name = prompt("Ingrese nombre a borrar:");
-    let indice = nombres.indexOf(name);
+function borrar(nombre) {
+    let indice = nombres.indexOf(nombre);
     nombres.splice(indice,1);
-    nombres.splice(indice,1);
+    montos.splice(indice,1);
     imprimir();
+    calcular();
 }
 
 function imprimir() {

@@ -19,9 +19,11 @@
         <article>
             <section>  
                 <h3>Ingresar nombre y gasto</h3>
+                <h4>Ingrese un nombre para borrar la primer referencia</h4>
                 <input type="text" id="nombre" placeholder="Nombre">
-                <input type="numbre" id="gasto" placeholder="Gasto">
+                <input type="number" id="gasto" placeholder="Gasto">
                 <button id="boton" onclick="agregar(nombre.value, gasto.value)">Agregar</button>
+                <button id="boton" onclick="borrar(nombre.value)">Borrar</button>
             </section>
             <section id="datos">
             </section>
@@ -31,6 +33,7 @@
     </main>
     <footer>
         <h6>Curso Full Stack Developer - Sprint 2 - ITBA</h6>
+        <h6>Elias Román Upstein - Comisión 6</h6>
     </footer>
 </body>
 </html>
