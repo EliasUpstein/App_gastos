@@ -12,6 +12,12 @@ function calcular() {
     }
     pagarcu = parseFloat(total / parseInt(montos.length)).toFixed(2);
 
+    if(total === undefined || total === NaN || total == "")
+        total = parseFloat(0).toFixed(2);
+
+    if(pagarcu === undefined || pagarcu === NaN || pagarcu == "")
+        pagarcu = parseFloat(0).toFixed(2);
+
     let pagarid = document.getElementById("pagar");
     document.getElementById("pagar").innerHTML = ""
 
