@@ -1,0 +1,22 @@
+{
+    "datos":[
+        {
+            "nombre":"Elias",
+            "monto":"500",
+            "cobro":"efectivo",
+            "fecha":"9/6/2022, 21:19:33"
+        },
+        {
+            "nombre":"Fede",
+            "monto":"640",
+            "cobro":"efectivo",
+            "fecha":"9/6/2022, 21:19:45"
+        },
+        {
+            "nombre":"Juan"
+            ,"monto":"310"
+            ,"cobro":"efectivo"
+            ,"fecha":"9/6/2022, 21:19:59"
+        }
+    ]
+}
